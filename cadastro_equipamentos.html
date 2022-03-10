@@ -14,7 +14,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand">
-            <img src="img/engrenagem-verde.png" width="100px"> Easylub
+            <img class="logo" src="img/engrenagem-verde.png" width="100px"> 
+                  <button class="btn btn-outline-success me-2" type="button" href="index.html">Easylub</button>
         </a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -23,11 +24,7 @@
                         Sobre
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="equipamentos.html">
-                        Equipamentos
-                    </a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="lubrificantes.html">
                         Lubrificantes
@@ -41,30 +38,19 @@
         <div class="container-fluid agenda text-center margin">
             <h3>Equipamentos</h3>
             <br>
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <img class="img-fluid" src="img/equipamentos-industriais.jpg">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid" src="img/manutencao-maquinas-industriais-e1560793345409.jpg">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid" src="img/instalacao-maquinas-e-equipamentos-industriais-03.jpg">
-                    </div>
-                </div>
-                <div class="row">
-                    <p class="text-equipamentos">
-                        Você poderá cadastrar informações dos equipamentos, relacionadas a sua localização e a frequência em que a lubrificação deverá ser realizada.
-                    </p>
+            <div class="row">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nome do equipamento</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
             </div>
+        </div>
     </section>
-    
+
 </body>
 <footer class="text-center">
-    <p>
-        Desenvolvido por Williany Oliveira
-    </p>
+
 </footer>
+
 </html>

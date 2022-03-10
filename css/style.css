@@ -1,6 +1,6 @@
 
 .navbar{
-    background-color: red;
+
 }
 .text{
     text-align: justify;
@@ -17,3 +17,18 @@
 .margin{
     padding: 30px;
 }
+.caixa-login{
+    background-color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+}
+.titulo-login{
+    text-align: center;
+    margin-left: 600px;
+}
+
+.form-select{
+    margin-bottom: 25px;
+}
+
