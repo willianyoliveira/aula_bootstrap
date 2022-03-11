@@ -28,7 +28,11 @@
     margin-left: 600px;
 }
 
-.form-select{
-    margin-bottom: 25px;
+.form-row{
+    float:left;
+    display: inline-block;  
+}
+div{
+    display: inline-block;
 }
 

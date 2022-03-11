@@ -1,0 +1,56 @@
+
+.navbar{
+
+}
+.text{
+    text-align: justify;
+    font-size: 25px;
+}
+.text-equipamentos{
+    margin-top: 30px;
+    font-size: 25px;
+}
+.img-fluid{
+    width: 400px;
+    height: 400px;
+ }
+.margin{
+    padding: 30px;
+}
+
+.form-row{
+    float:left;
+    display: inline-block;  
+}
+
+.row-a{
+    margin: 20px;
+}
+.row-b{
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+.row-c{
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+.container{
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: fit-content;
+    max-height: fit-content;
+    margin-top: 20px;
+    padding-bottom: 50px;
+
+}
+.row-d{
+    float: right;
+    display: inline;
+    margin-top: 100px;
+
+}
