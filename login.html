@@ -13,35 +13,47 @@
 
 <body background="img\industrial-2716236_1280.webp">
 
-    
-       
-        <div class="container-fluid">  
-            <form class="caixa">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Select or profile to login</option>
-                    <option value="1">Administrator</option>
-                    <option value="2">Mechanic</option>
-                  </select>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    
-                </div>
-                <div class="btn-submit">
-                    <button type="submit" class="btn btn-primary" >Submit</button>
-                </div>
-            </form>
-        </div>
-    
+
+
+    <div class="container-fluid">
+        <script>
+            function login() {
+                let email = document.getElementById("InputEmail").value;
+                let senha = document.getElementById("InputPassword").value;
+                let perfil = document.getElementById("perfilSelect").value;
+                let dados_login = {
+                    perfil: perfil,
+                    email: email,
+                    senha: senha,
+                }
+                console.log(dados_login)
+            }
+        </script>
+        <form class="caixa">
+            <select class="form-select" aria-label="Default select example" id="perfilSelect">
+                <option selected>Select or profile to login</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Mecanico">Mecânico</option>
+            </select>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="InputPassword">
+            </div>
+            <div class="mb-3">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+            </div>
+            <div class="btn-submit">
+                <button type="button" class="btn btn-primary" onclick="login()">Submit</button>
+            </div>
+        </form>
+    </div>
+
 
 </body>
 <footer class="text-center">
