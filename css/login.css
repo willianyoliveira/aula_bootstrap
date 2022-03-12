@@ -1,0 +1,35 @@
+body{
+    
+    background-size: cover;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+
+}
+
+.caixa{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    margin-top: 200px;
+    margin-left: 450px;
+    margin-right: 450px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-radius: 20px;
+
+}
+.btn-submit{
+    
+}
+.mb-3{
+    margin: 20px;
+    color: aliceblue;
+}
+.form-select{
+    margin: 19px;
+    max-width: 638px;
+}
+
+.btn-submit{
+    margin-left: 560px;
+}

@@ -36,3 +36,17 @@ div{
     display: inline-block;
 }
 
+.table{
+    display: flex;
+    margin: auto;
+}
+
+.row-b{
+    display: inline-block;
+    margin: 30px;
+}
+.row-c{
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 30px;
+}
