@@ -6,12 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="cadastro_lubrificantes">
+    <link rel="stylesheet" type="text/css" href="css\cadastro_lubrificantes.css">
 
     <title>Easylub</title>
 </head>
 
 <body>
+    <script>
+
+        function verifica_lubrificante() {
+            var input = document.getElementById("viscosidade");
+            var selected = document.getElementById("lubrificantes").value;
+            console.log(selected)
+
+            if (selected === 1) {
+                document.getElementById("viscosidade").disabled = false
+            } else if (selected === 2 || selected === 3) {
+                document.getElementById("viscosidade").disabled = true
+            }
+        }
+        function verifica_tipo_lubrificante(value) {
+            console.log(value)
+            var input = document.getElementById("NLGI").value;
+
+            if (value === 1) {
+                input.disabled = false
+            } else if (value === 2 || value === 3) {
+                input.disabled = true
+            }
+        }
+    </script>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand">
             <img class="logo" src="img/engrenagem-verde.png" width="100px">
@@ -22,34 +46,37 @@
 
                 <li class="nav-item">
                     <div class="dropdown show">
-                        <a class="btn btn-secundary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="btn btn-secundary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Equipamentos
-                          </a>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="cadastro_equipamentos.html">Cadastrar</a></li>
-                            <li><a class="dropdown-item"  href="visualizar_equipamentos.html">Visualizar</a></li>
+                            <li><a class="dropdown-item" href="visualizar_equipamentos.html">Visualizar</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown show">
-                        <a class="btn btn-secundary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="btn btn-secundary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Lubrificantes
-                          </a>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="cadastro_lubrificantes.html">Cadastrar</a></li>
-                            <li><a class="dropdown-item"  href="visualizar_lubrificantes.html">Visualizar</a></li>
+                            <li><a class="dropdown-item" href="visualizar_lubrificantes.html">Visualizar</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown show">
-                        <a class="btn btn-secundary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="btn btn-secundary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Funcionários
-                          </a>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="cadastro_de_funcionarios.html">Cadastrar</a></li>
-                            <li><a class="dropdown-item"  href="visualizar_funcionarios.html">Visualizar</a></li>
+                            <li><a class="dropdown-item" href="visualizar_funcionarios.html">Visualizar</a></li>
                         </ul>
                     </div>
                 </li>
@@ -61,14 +88,55 @@
         <div class="container-fluid agenda text-center margin">
             <h3>Lubrificantes</h3>
             <br>
-            
+            <input class="form-control" type="text" placeholder="ID" id="id_lubrificante">
+            <div class="form-row">
+                <div class="row-b">
+                    <div class="lubrificantes">
+                        <select id="lubrificantes" class="form-select" onchange="verifica_lubrificante()">
+                            <option selected>Lubrificantes</option>
+                            <option value="1">Graxa</option>
+                            <option value="2">Óleo</option>
+                            <option value="3">Spray</option>
+                        </select>
+                    </div>
+                    <div class="viscosidade">
+                        <input class="form-control" type="text" placeholder="Viscosidade" name="viscosidade"
+                            id="viscosidade" disabled>
+                    </div>
+                </div>
+
+                <div class="row-c">
+                    <div class="tipo_lubrificante">
+                        <select id="tipo_lubrificante" class="form-select"
+                            onchange="verifica_tipo_lubrificante(this.value)">
+                            <option selected>Tipo de lubrificante</option>
+                            <option value="1">Mineral</option>
+                            <option value="2">Sintético</option>
+                            <option value="3">Alimentício</option>
+                        </select>
+                    </div>
+                    <div class="ngli">
+                        <input class="form-control" type="text" placeholder="NLGI" name="NGLI" id="NLGI" disabled>
+                    </div>
+                </div>
+                <div class="row-d">
+                    <button onclick="cadastrar_equipamento()" type="submit" id="btn"
+                        class="btn btn-primary">Cadastrar</button>
+                </div>
+            </div>
     </section>
 
 </body>
 <footer class="text-center">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="Controller/cadastrar_equipamento.js"></script>
 </footer>
 

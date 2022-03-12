@@ -11,5 +11,25 @@ function cadastrar_equipamento() {
 		local: local,
 		frequencia_aplicacao: frequencia_aplicacao
 	}
-	console.log(dados_equipamento)
+	
+	var that = this;
+	var sUrl = "acrescentarUrl"
+	$.ajax(sUrl,{
+		method: "POST",
+		data: JSON.stringify(dados_equipamento),
+		contentType: "aplication/json; charset=UTF-8",
+		success: function (response) {
+			const resp = typeof response === "string" ? JSON.parse(response) : response;
+			if(resp.counter > 0){
+				xhr.send(data)
+				that._onCreateSuccessDialog();
+			}else{
+				that._onCreateErrorDialog();
+			}
+		},
+		error: function(){
+
+		}
+
+	});
 }
